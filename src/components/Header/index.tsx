@@ -1,9 +1,10 @@
-import { MaterialIcons } from '@expo/vector-icons';
+import { Feather, MaterialCommunityIcons, MaterialIcons } from '@expo/vector-icons';
 import React from 'react';
 
 import { Text } from 'react-native';
+import colors from '../../styles/colors';
 
-import { Container } from './styles';
+import { Container, Avatar, RigthSide,Button, OnlineStatus } from './styles';
 
 const Header : React.FC = () => {
    return (
@@ -15,6 +16,24 @@ const Header : React.FC = () => {
       <RigthSide>
          <Button>
             <MaterialIcons
+               name='notifications-none'
+               size={26}
+               color={colors.black}
+            />
+         </Button>
+         <Button>
+            <MaterialCommunityIcons
+               name='notifications-none'
+               size={26}
+               color={colors.black}
+            />
+         </Button>
+         <Button>
+            <Feather
+               name='notifications-none'
+               size={26}
+               color={colors.black}
+            />
          </Button>
 
       </RigthSide>
