@@ -11,7 +11,33 @@ const { Navigator, Screen } = createBottomTabNavigator();
 
 const Routes: React.FC = () => (
   <NavigationContainer>
-    <Navigator>
+    <Navigator
+      tabBarOptions={{
+        style:{
+          heigth: 90,
+          backgroundColor: colors.primary,
+          borderTopWidth: 0,
+          justifyContent: 'center'
+        },
+        tabStyle:{
+          marginTop: 10,
+          alignItems: 'center',
+          justifyContent: 'center'
+        },
+        iconStyle:{
+          flex: 0,
+          width: 20,
+          height: 20,
+        },
+        labelStyle: {
+          fontFamily: 'roboto_400',
+          fontSize: 11,
+          marginTop: 12
+        },
+        inactiveTintColor: colors.black,
+        activeTintColor: colors.purple
+      }}
+    >
       <Screen name="Following" component={Following} options={{
         tabBarIcon: ({size,focused}) => {
           return(
@@ -38,7 +64,7 @@ const Routes: React.FC = () => (
         tabBarIcon: ({size,focused}) => {
           return(
             <Ionicons
-              name='md-heart'
+              name='md-browsers'
               size={size}
               color={focused ? colors.purple : colors.black}
             />
@@ -48,8 +74,8 @@ const Routes: React.FC = () => (
       <Screen name="Esports" component={ComingSoon} options={{
         tabBarIcon: ({size,focused}) => {
           return(
-            <Ionicons
-              name='md-heart'
+            <MaterialCommunityIcons
+              name='trophy-outline'
               size={size}
               color={focused ? colors.purple : colors.black}
             />
