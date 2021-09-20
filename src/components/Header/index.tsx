@@ -23,14 +23,14 @@ const Header : React.FC = () => {
          </Button>
          <Button>
             <MaterialCommunityIcons
-               name='notifications-none'
+               name='message-outline'
                size={26}
                color={colors.black}
             />
          </Button>
          <Button>
             <Feather
-               name='notifications-none'
+               name='search'
                size={26}
                color={colors.black}
             />
